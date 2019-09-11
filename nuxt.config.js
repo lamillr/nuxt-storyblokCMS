@@ -39,6 +39,8 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    ["storyblok-nuxt", {accessToken: "2Yj2cV5mtqj5KEeELpJOAwtt", cacheProvider: "memory"}
+    ]
   ],
   /*
   ** Build configuration
