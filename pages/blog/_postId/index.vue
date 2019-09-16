@@ -13,7 +13,7 @@ export default {
   asyncData(context) {
     return context.app.$storyapi
     .get('cdn/stories/blog/' + context.params.postId, {
-      version: "draft"
+      version: process.env.NODE_ENV == "production" ? "published" : "draft" 
     })
     .then(res => {
       return{
@@ -27,6 +27,7 @@ export default {
 </script>
 
 <style>
+
 .post-pic {
 width: 100%;
 height: 300px;
@@ -35,11 +36,15 @@ background-position: center;
 }
 .post-content {
   width: 80%;
-  height: 300px;
-  margin: auto;
+  max-width: 500px;
+  margin: auto;  
 }
+
 .post-content p {
   white-space: pre-line;
+  margin-right: 20px;
+  margin-left: 20px;
+  line-height: 1.6;
 }
 
 </style>

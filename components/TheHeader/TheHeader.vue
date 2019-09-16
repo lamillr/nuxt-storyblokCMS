@@ -2,7 +2,7 @@
   <header class="main-header">
     <nav class="main-nav">
       <ul class="nav-links">
-        <nuxt-link to="/" tag="li" class="logo"><a>N/S</a></nuxt-link>
+        <nuxt-link to="/blog" tag="li" class="logo"><a>N/S</a></nuxt-link>
         <nuxt-link to="/" tag="li" ><a>Posts</a></nuxt-link>
         <nuxt-link to="/about" tag="li"><a>About</a></nuxt-link>
       </ul>
@@ -52,7 +52,7 @@
 }
   .logo:hover,
   .logo:active,
-  .logo .nuxt-link-exact-active{
+  .logo .nuxt-link-active{
    color: #568259;
 }
   </style>
