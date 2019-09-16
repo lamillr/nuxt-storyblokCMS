@@ -43,8 +43,8 @@ export default {
     ["storyblok-nuxt", 
     {
       accessToken:process.env.NODE_ENV == "production"
-        ? ""
-        : "", 
+        ? "jkadyRdmBqLo0uxURKI6qAtt"
+        : "b2QteGuMGc4uytafEgfdUgtt", 
         cacheProvider: "memory"
       }
     ]
@@ -56,7 +56,7 @@ export default {
   generate: {
     routes: function() {
       return axios.get(
-        "https://api.storyblok.com/v1/cdn/stories?version=published&token=Att&starts_with=blog&cv=" +
+        "https://api.storyblok.com/v1/cdn/stories?version=published&token=jkadyRdmBqLo0uxURKI6qAtt&starts_with=blog&cv=" +
           Math.floor(Date.now() / 1e3)
       )
       .then(res => {
